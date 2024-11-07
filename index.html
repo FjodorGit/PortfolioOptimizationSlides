@@ -18,8 +18,50 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section style="font-size: 75px">Portfolio Optimization</section>
-			<section>Slide 2</section>
+			<section>Portfolio Optimization</section>
+			<section data-auto-animate>
+				<p style="">Choose the best Portfolio</p>
+				<img width="70%" height="70%"
+					src="./resources/A_pie_chart_representing_an_investment_portfolio_including_stocks__bonds__gold__property__cash__and_crypto.png">
+			</section>
+			<section data-auto-animate>
+				<p style="">Best?</p>
+				<img width="70%" height="70%"
+					src="./resources/A_pie_chart_representing_an_investment_portfolio_including_stocks__bonds__gold__property__cash__and_crypto.png">
+			</section>
+			<section>Maximize return for a certain level of risk</section>
+			<section>
+				<p>Assume known</p>
+				<ul>
+					<li>Returns</li>
+					<li>Variance</li>
+					<li>Covariance</li>
+				</ul>
+			</section>
+			<section>
+				<img src="resources/efficient_frontier.svg">
+			</section>
+			<section>
+				<p>Vector of allocations: $x \in [0, 1]^{n}$</p>
+				<p>Vector of returns: $ \mu \in \mathbb{R}^{n}$</p>
+				<p>Covariance matrix: $\Sigma \in \mathbb{R}^{n \times n}$</p>
+				<p>Return to achieve: $r \in \mathbb{R}$</p>
+			</section>
+			<section>
+				<p> $\text{min}_{x \in [0,1]^n}\ x^{T} \Sigma x$</p>
+				<p> given</p>
+				<p> $ \Sigma_{i = 1}^{n} x_i = 1$</p>
+				<p> $ \Sigma_{i = 1}^{n} x_i\mu_i = r$</p>
+			</section>
+			<section>
+				<img src="resources/efficient_frontier.svg">
+			</section>
+			<section>
+				<p>Linear Programming</p>
+				<p>Quadratic Programming</p>
+				<p>Stochastic Programming</p>
+				<p>Copulas</p>
+			</section>
 		</div>
 	</div>
 
@@ -27,6 +69,7 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -37,7 +80,7 @@
 			progress: false,
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
 		});
 	</script>
 </body>
